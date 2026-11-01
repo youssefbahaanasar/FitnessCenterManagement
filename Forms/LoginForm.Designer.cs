@@ -28,49 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            monthCalendar1 = new MonthCalendar();
-            listBox1 = new ListBox();
-            progressBar1 = new ProgressBar();
-            SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(555, 38);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 0;
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(555, 212);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(120, 94);
-            listBox1.TabIndex = 1;
-            // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(555, 312);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(100, 23);
-            progressBar1.TabIndex = 2;
-            // 
-            // LoginForm
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(progressBar1);
-            Controls.Add(listBox1);
-            Controls.Add(monthCalendar1);
-            Name = "LoginForm";
-            Text = "LoginForm";
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "LoginForm";
         }
 
         #endregion
-
-        private MonthCalendar monthCalendar1;
-        private ListBox listBox1;
-        private ProgressBar progressBar1;
     }
 }
