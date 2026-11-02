@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FitnessCenterManagement.Data;
+using FitnessCenterManagement.Services;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FitnessCenterManagement.Services;
-using Microsoft.Data.SqlClient;
 namespace FitnessCenterManagement.Forms
 {
     public partial class LoginForm : Form
@@ -22,7 +23,6 @@ namespace FitnessCenterManagement.Forms
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
-
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
 
@@ -67,10 +67,13 @@ namespace FitnessCenterManagement.Forms
                     return;
                 }
 
-                MessageBox.Show(
-                    $"Welcome, {user.Username} ({user.Role})",
-                    "Login Successful"
-                );
+                MainForm mainForm = new MainForm();
+
+                this.Hide();
+
+                mainForm.ShowDialog();
+
+                this.Close();
 
                 // Next step: open MainForm and pass user.Role
             }
@@ -99,6 +102,23 @@ namespace FitnessCenterManagement.Forms
             }
         }
 
+        private async void btnTestConnection_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using var connection =
+                    DatabaseConnection.GetConnection();
 
+                await connection.OpenAsync();
+
+                MessageBox.Show(
+                    "Database Connected Successfully!"
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
