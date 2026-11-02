@@ -1,4 +1,4 @@
-﻿using FitnessCenterManagement.Data;
+using FitnessCenterManagement.Data;
 using FitnessCenterManagement.Services;
 using Microsoft.Data.SqlClient;
 using System;
