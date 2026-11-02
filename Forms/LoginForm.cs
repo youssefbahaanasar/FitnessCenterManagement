@@ -1,4 +1,7 @@
-﻿using System;
+using FitnessCenterManagement.Data;
+using FitnessCenterManagement.Services;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FitnessCenterManagement.Services;
-using Microsoft.Data.SqlClient;
 namespace FitnessCenterManagement.Forms
 {
     public partial class LoginForm : Form
@@ -21,30 +22,103 @@ namespace FitnessCenterManagement.Forms
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            string password = txtPassword.Text;
 
-            // Mock authentication logic (Replace with Database query)
-            if (username == "admin" && password == "123")
+            bool valid = true;
+
+            if (string.IsNullOrWhiteSpace(username))
             {
-                OpenMainForm(UserRole.Admin, "Administrator");
+                errorProvider1.SetError(txtUsername, "Username is required");
+
+                valid = false;
             }
-            else if (username == "reception" && password == "123")
+
+            if (string.IsNullOrWhiteSpace(password))
             {
-                OpenMainForm(UserRole.Receptionist, "Receptionist User");
+                errorProvider1.SetError(
+                    txtPassword, "Password is required");
+
+                valid = false;
             }
-            else
+
+            if (!valid)
+                return;
+
+            try
             {
-                MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnLogin.Enabled = false;
+                btnLogin.Text = "Signing in...";
+
+                var user = await _authService.LoginAsync(
+                    username, password
+                );
+
+                if (user == null)
+                {
+                    MessageBox.Show(
+                        "Invalid credentials or inactive account.",
+                        "Login Failed",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+
+                    return;
+                }
+
+                MainForm mainForm = new MainForm();
+
+                this.Hide();
+
+                mainForm.ShowDialog();
+
+                this.Close();
+
+                // Next step: open MainForm and pass user.Role
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show(
+                    "Unable to connect to the database.",
+                    "Database Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(
+                    "An unexpected error occurred.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+            finally
+            {
+                btnLogin.Enabled = true;
+                btnLogin.Text = "Login";
             }
         }
-        private void OpenMainForm(UserRole role, string displayName)
+
+        private async void btnTestConnection_Click(object sender, EventArgs e)
         {
-            MainForm main = new MainForm(role, displayName);
-            this.Hide();
-            main.ShowDialog();
-            this.Close(); // Closes application when MainForm exits
-        }
+            try
+            {
+                using var connection =
+                    DatabaseConnection.GetConnection();
 
+                await connection.OpenAsync();
+
+                MessageBox.Show(
+                    "Database Connected Successfully!"
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
