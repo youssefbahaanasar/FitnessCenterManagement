@@ -67,7 +67,19 @@ namespace FitnessCenterManagement.Forms
                     return;
                 }
 
-                MainForm mainForm = new MainForm();
+                if (!Enum.TryParse<UserRole>(user.Role, true, out var role))
+                {
+                    MessageBox.Show(
+                        "User role is invalid.",
+                        "Login Failed",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+
+                    return;
+                }
+
+                MainForm mainForm = new MainForm(role, user.Username);
 
                 this.Hide();
 
