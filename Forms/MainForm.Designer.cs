@@ -29,144 +29,273 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            tableLayoutPanel1 = new TableLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            sidebar = new Panel();
+            btnscontainer = new Panel();
+            button8 = new Button();
+            btnSettings = new Button();
+            btnUserManagement = new Button();
+            btnReports = new Button();
+            btnTrainers = new Button();
+            btnSubscriptions = new Button();
+            btnAttendance = new Button();
+            btnMembers = new Button();
+            btnDashboard = new Button();
+            logo = new PictureBox();
+            pnlcontent = new Panel();
+            sidebar.SuspendLayout();
+            btnscontainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // sidebar
             // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.5225563F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.47744F));
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1064, 632);
-            tableLayoutPanel1.TabIndex = 0;
+            sidebar.Controls.Add(btnscontainer);
+            sidebar.Controls.Add(logo);
+            sidebar.Dock = DockStyle.Left;
+            sidebar.Location = new Point(0, 0);
+            sidebar.Name = "sidebar";
+            sidebar.Size = new Size(200, 650);
+            sidebar.TabIndex = 0;
             // 
-            // tableLayoutPanel2
+            // btnscontainer
             // 
-            tableLayoutPanel2.ColumnCount = 1;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Controls.Add(pictureBox1, 0, 0);
-            tableLayoutPanel2.Controls.Add(button1, 0, 1);
-            tableLayoutPanel2.Controls.Add(button2, 0, 2);
-            tableLayoutPanel2.Controls.Add(button3, 0, 3);
-            tableLayoutPanel2.Controls.Add(button4, 0, 4);
-            tableLayoutPanel2.Controls.Add(button5, 0, 5);
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 3);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 6;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(223, 626);
-            tableLayoutPanel2.TabIndex = 0;
+            btnscontainer.BackColor = Color.FromArgb(15, 23, 42);
+            btnscontainer.Controls.Add(button8);
+            btnscontainer.Controls.Add(btnSettings);
+            btnscontainer.Controls.Add(btnUserManagement);
+            btnscontainer.Controls.Add(btnReports);
+            btnscontainer.Controls.Add(btnTrainers);
+            btnscontainer.Controls.Add(btnSubscriptions);
+            btnscontainer.Controls.Add(btnAttendance);
+            btnscontainer.Controls.Add(btnMembers);
+            btnscontainer.Controls.Add(btnDashboard);
+            btnscontainer.Dock = DockStyle.Fill;
+            btnscontainer.Location = new Point(0, 124);
+            btnscontainer.Name = "btnscontainer";
+            btnscontainer.Size = new Size(200, 526);
+            btnscontainer.TabIndex = 1;
             // 
-            // pictureBox1
+            // button8
             // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(217, 194);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            button8.BackColor = Color.DarkRed;
+            button8.Dock = DockStyle.Top;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatAppearance.MouseOverBackColor = Color.Red;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(0, 400);
+            button8.Margin = new Padding(5);
+            button8.Name = "button8";
+            button8.Padding = new Padding(1);
+            button8.Size = new Size(200, 50);
+            button8.TabIndex = 8;
+            button8.Text = "🚪 Logout";
+            button8.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnSettings
             // 
-            button1.Location = new Point(3, 203);
-            button1.Name = "button1";
-            button1.Size = new Size(217, 56);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnSettings.BackColor = Color.Transparent;
+            btnSettings.Dock = DockStyle.Top;
+            btnSettings.FlatAppearance.BorderSize = 0;
+            btnSettings.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnSettings.FlatStyle = FlatStyle.Flat;
+            btnSettings.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnSettings.ForeColor = Color.White;
+            btnSettings.Location = new Point(0, 350);
+            btnSettings.Margin = new Padding(5);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Padding = new Padding(1);
+            btnSettings.Size = new Size(200, 50);
+            btnSettings.TabIndex = 7;
+            btnSettings.Text = "⚙️ Settings";
+            btnSettings.TextAlign = ContentAlignment.MiddleLeft;
+            btnSettings.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnUserManagement
             // 
-            button2.Dock = DockStyle.Fill;
-            button2.Location = new Point(3, 265);
-            button2.Name = "button2";
-            button2.Size = new Size(217, 56);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnUserManagement.BackColor = Color.Transparent;
+            btnUserManagement.Dock = DockStyle.Top;
+            btnUserManagement.FlatAppearance.BorderSize = 0;
+            btnUserManagement.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnUserManagement.FlatStyle = FlatStyle.Flat;
+            btnUserManagement.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnUserManagement.ForeColor = Color.White;
+            btnUserManagement.Location = new Point(0, 300);
+            btnUserManagement.Margin = new Padding(5);
+            btnUserManagement.Name = "btnUserManagement";
+            btnUserManagement.Padding = new Padding(1);
+            btnUserManagement.Size = new Size(200, 50);
+            btnUserManagement.TabIndex = 6;
+            btnUserManagement.Text = "👤 User Management";
+            btnUserManagement.TextAlign = ContentAlignment.MiddleLeft;
+            btnUserManagement.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnReports
             // 
-            button3.Dock = DockStyle.Fill;
-            button3.Location = new Point(3, 327);
-            button3.Name = "button3";
-            button3.Size = new Size(217, 56);
-            button3.TabIndex = 3;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnReports.BackColor = Color.Transparent;
+            btnReports.Dock = DockStyle.Top;
+            btnReports.FlatAppearance.BorderSize = 0;
+            btnReports.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnReports.FlatStyle = FlatStyle.Flat;
+            btnReports.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnReports.ForeColor = Color.White;
+            btnReports.Location = new Point(0, 250);
+            btnReports.Margin = new Padding(5);
+            btnReports.Name = "btnReports";
+            btnReports.Padding = new Padding(1);
+            btnReports.Size = new Size(200, 50);
+            btnReports.TabIndex = 5;
+            btnReports.Text = "📈 Reports";
+            btnReports.TextAlign = ContentAlignment.MiddleLeft;
+            btnReports.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnTrainers
             // 
-            button4.Dock = DockStyle.Fill;
-            button4.Location = new Point(3, 389);
-            button4.Name = "button4";
-            button4.Size = new Size(217, 56);
-            button4.TabIndex = 4;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnTrainers.BackColor = Color.Transparent;
+            btnTrainers.Dock = DockStyle.Top;
+            btnTrainers.FlatAppearance.BorderSize = 0;
+            btnTrainers.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnTrainers.FlatStyle = FlatStyle.Flat;
+            btnTrainers.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnTrainers.ForeColor = Color.White;
+            btnTrainers.Location = new Point(0, 200);
+            btnTrainers.Margin = new Padding(5);
+            btnTrainers.Name = "btnTrainers";
+            btnTrainers.Padding = new Padding(1);
+            btnTrainers.Size = new Size(200, 50);
+            btnTrainers.TabIndex = 4;
+            btnTrainers.Text = "🏋️ Trainers";
+            btnTrainers.TextAlign = ContentAlignment.MiddleLeft;
+            btnTrainers.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnSubscriptions
             // 
-            button5.Dock = DockStyle.Fill;
-            button5.Location = new Point(3, 451);
-            button5.Name = "button5";
-            button5.Size = new Size(217, 172);
-            button5.TabIndex = 5;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            btnSubscriptions.BackColor = Color.Transparent;
+            btnSubscriptions.Dock = DockStyle.Top;
+            btnSubscriptions.FlatAppearance.BorderSize = 0;
+            btnSubscriptions.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnSubscriptions.FlatStyle = FlatStyle.Flat;
+            btnSubscriptions.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnSubscriptions.ForeColor = Color.White;
+            btnSubscriptions.Location = new Point(0, 150);
+            btnSubscriptions.Margin = new Padding(5);
+            btnSubscriptions.Name = "btnSubscriptions";
+            btnSubscriptions.Padding = new Padding(1);
+            btnSubscriptions.Size = new Size(200, 50);
+            btnSubscriptions.TabIndex = 3;
+            btnSubscriptions.Text = "💳 Subscriptions";
+            btnSubscriptions.TextAlign = ContentAlignment.MiddleLeft;
+            btnSubscriptions.UseVisualStyleBackColor = false;
+            // 
+            // btnAttendance
+            // 
+            btnAttendance.BackColor = Color.Transparent;
+            btnAttendance.Dock = DockStyle.Top;
+            btnAttendance.FlatAppearance.BorderSize = 0;
+            btnAttendance.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnAttendance.FlatStyle = FlatStyle.Flat;
+            btnAttendance.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnAttendance.ForeColor = Color.White;
+            btnAttendance.Location = new Point(0, 100);
+            btnAttendance.Margin = new Padding(5);
+            btnAttendance.Name = "btnAttendance";
+            btnAttendance.Padding = new Padding(1);
+            btnAttendance.Size = new Size(200, 50);
+            btnAttendance.TabIndex = 2;
+            btnAttendance.Text = "📅 Attendance";
+            btnAttendance.TextAlign = ContentAlignment.MiddleLeft;
+            btnAttendance.UseVisualStyleBackColor = false;
+            // 
+            // btnMembers
+            // 
+            btnMembers.BackColor = Color.Transparent;
+            btnMembers.Dock = DockStyle.Top;
+            btnMembers.FlatAppearance.BorderSize = 0;
+            btnMembers.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnMembers.FlatStyle = FlatStyle.Flat;
+            btnMembers.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnMembers.ForeColor = Color.White;
+            btnMembers.Location = new Point(0, 50);
+            btnMembers.Margin = new Padding(5);
+            btnMembers.Name = "btnMembers";
+            btnMembers.Padding = new Padding(1);
+            btnMembers.Size = new Size(200, 50);
+            btnMembers.TabIndex = 1;
+            btnMembers.Text = "👥 Members";
+            btnMembers.TextAlign = ContentAlignment.MiddleLeft;
+            btnMembers.UseVisualStyleBackColor = false;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.Transparent;
+            btnDashboard.Dock = DockStyle.Top;
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Location = new Point(0, 0);
+            btnDashboard.Margin = new Padding(5);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Padding = new Padding(1);
+            btnDashboard.Size = new Size(200, 50);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "📊 Dashboard";
+            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.UseVisualStyleBackColor = false;
+            // 
+            // logo
+            // 
+            logo.BackColor = SystemColors.HighlightText;
+            logo.BackgroundImage = (Image)resources.GetObject("logo.BackgroundImage");
+            logo.BackgroundImageLayout = ImageLayout.Zoom;
+            logo.Dock = DockStyle.Top;
+            logo.Location = new Point(0, 0);
+            logo.Name = "logo";
+            logo.Size = new Size(200, 124);
+            logo.TabIndex = 0;
+            logo.TabStop = false;
+            // 
+            // pnlcontent
+            // 
+            pnlcontent.Dock = DockStyle.Fill;
+            pnlcontent.ImeMode = ImeMode.HangulFull;
+            pnlcontent.Location = new Point(200, 0);
+            pnlcontent.Name = "pnlcontent";
+            pnlcontent.Size = new Size(900, 650);
+            pnlcontent.TabIndex = 1;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1064, 632);
-            Controls.Add(tableLayoutPanel1);
+            ClientSize = new Size(1100, 650);
+            Controls.Add(pnlcontent);
+            Controls.Add(sidebar);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "MainForm";
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            sidebar.ResumeLayout(false);
+            btnscontainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
-        private TableLayoutPanel tableLayoutPanel2;
-        private PictureBox pictureBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Panel sidebar;
+        private PictureBox logo;
+        private Panel pnlcontent;
+        private Panel btnscontainer;
+        private Button btnUserManagement;
+        private Button btnReports;
+        private Button btnTrainers;
+        private Button btnSubscriptions;
+        private Button btnAttendance;
+        private Button btnMembers;
+        private Button btnDashboard;
+        private Button button8;
+        private Button btnSettings;
     }
 }
