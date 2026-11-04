@@ -7,12 +7,9 @@ namespace FitnessCenterManagement.Services;
 
 public class AuthService
 {
-    public async Task<User?> LoginAsync(
-        string username,
-        string password)
+    public async Task<User?> LoginAsync(string username, string password)
     {
-        using var connection =
-            DatabaseConnection.GetConnection();
+        using var connection = DatabaseConnection.GetConnection();
 
         await connection.OpenAsync();
 
@@ -25,9 +22,7 @@ public class AuthService
 
         using var command = new SqlCommand(sql, connection);
 
-        command.Parameters.Add(
-            "@Username", SqlDbType.NVarChar, 50
-        ).Value = username;
+        command.Parameters.Add("@Username", SqlDbType.NVarChar, 50).Value = username;
 
         using var reader = await command.ExecuteReaderAsync();
 
