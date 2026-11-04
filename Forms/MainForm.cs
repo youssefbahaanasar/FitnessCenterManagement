@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessCenterManagement.userControls;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -24,12 +25,12 @@ namespace FitnessCenterManagement.Forms
 
             WireEvents();
             ApplyRolePermissions();
-            LoadView(CreatePlaceholderView($"Welcome, {_userName}"));
+            LoadDashboard();
         }
 
         private void WireEvents()
         {
-            btnDashboard.Click += (_, _) => LoadView(CreatePlaceholderView("Dashboard"));
+            btnDashboard.Click += (_, _) => LoadDashboard();
             btnMembers.Click += (_, _) => LoadView(CreatePlaceholderView("Members"));
             btnAttendance.Click += (_, _) => LoadView(CreatePlaceholderView("Attendance"));
             btnSubscriptions.Click += (_, _) => LoadView(CreatePlaceholderView("Subscriptions"));
@@ -38,6 +39,11 @@ namespace FitnessCenterManagement.Forms
             btnUserManagement.Click += BtnUserManagement_Click;
             btnSettings.Click += (_, _) => LoadView(new SettingsUserControl(_currentUserRole));
             button8.Click += btnLogout_Click;
+        }
+
+        private void LoadDashboard()
+        {
+            LoadView(new DashboardUserControl());
         }
 
         private void ApplyRolePermissions()
@@ -97,6 +103,16 @@ namespace FitnessCenterManagement.Forms
             using var login = new LoginForm();
             login.ShowDialog();
             Close();
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

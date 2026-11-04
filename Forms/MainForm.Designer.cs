@@ -59,7 +59,7 @@
             // 
             // btnscontainer
             // 
-            btnscontainer.BackColor = Color.FromArgb(15, 23, 42);
+            btnscontainer.BackColor = Color.FromArgb(16, 38, 74);
             btnscontainer.Controls.Add(button8);
             btnscontainer.Controls.Add(btnSettings);
             btnscontainer.Controls.Add(btnUserManagement);
@@ -70,27 +70,28 @@
             btnscontainer.Controls.Add(btnMembers);
             btnscontainer.Controls.Add(btnDashboard);
             btnscontainer.Dock = DockStyle.Fill;
-            btnscontainer.Location = new Point(0, 124);
+            btnscontainer.Location = new Point(0, 81);
             btnscontainer.Name = "btnscontainer";
-            btnscontainer.Size = new Size(200, 526);
+            btnscontainer.Size = new Size(200, 569);
             btnscontainer.TabIndex = 1;
             // 
             // button8
             // 
             button8.BackColor = Color.DarkRed;
-            button8.Dock = DockStyle.Top;
+            button8.Dock = DockStyle.Bottom;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatAppearance.MouseOverBackColor = Color.Red;
             button8.FlatStyle = FlatStyle.Flat;
             button8.ForeColor = Color.White;
-            button8.Location = new Point(0, 400);
+            button8.Location = new Point(0, 520);
             button8.Margin = new Padding(5);
             button8.Name = "button8";
             button8.Padding = new Padding(1);
-            button8.Size = new Size(200, 50);
+            button8.Size = new Size(200, 49);
             button8.TabIndex = 8;
             button8.Text = "🚪 Logout";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // btnSettings
             // 
@@ -246,18 +247,21 @@
             // 
             // logo
             // 
-            logo.BackColor = SystemColors.HighlightText;
-            logo.BackgroundImage = (Image)resources.GetObject("logo.BackgroundImage");
+            logo.BackColor = Color.FromArgb(16, 38, 74);
             logo.BackgroundImageLayout = ImageLayout.Zoom;
             logo.Dock = DockStyle.Top;
+            logo.Image = (Image)resources.GetObject("logo.Image");
             logo.Location = new Point(0, 0);
             logo.Name = "logo";
-            logo.Size = new Size(200, 124);
+            logo.Size = new Size(200, 81);
+            logo.SizeMode = PictureBoxSizeMode.Zoom;
             logo.TabIndex = 0;
             logo.TabStop = false;
+            logo.Click += logo_Click;
             // 
             // pnlcontent
             // 
+            pnlcontent.BackColor = SystemColors.ButtonFace;
             pnlcontent.Dock = DockStyle.Fill;
             pnlcontent.ImeMode = ImeMode.HangulFull;
             pnlcontent.Location = new Point(200, 0);
@@ -272,7 +276,7 @@
             ClientSize = new Size(1100, 650);
             Controls.Add(pnlcontent);
             Controls.Add(sidebar);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "MainForm";

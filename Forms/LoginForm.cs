@@ -51,9 +51,7 @@ namespace FitnessCenterManagement.Forms
                 btnLogin.Enabled = false;
                 btnLogin.Text = "Signing in...";
 
-                var user = await _authService.LoginAsync(
-                    username, password
-                );
+                var user = await _authService.LoginAsync(username, password);
 
                 if (user == null)
                 {
@@ -86,8 +84,6 @@ namespace FitnessCenterManagement.Forms
                 mainForm.ShowDialog();
 
                 this.Close();
-
-                // Next step: open MainForm and pass user.Role
             }
             catch (SqlException)
             {
@@ -114,23 +110,6 @@ namespace FitnessCenterManagement.Forms
             }
         }
 
-        private async void btnTestConnection_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using var connection =
-                    DatabaseConnection.GetConnection();
 
-                await connection.OpenAsync();
-
-                MessageBox.Show(
-                    "Database Connected Successfully!"
-                );
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
     }
 }
