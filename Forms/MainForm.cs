@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,26 +6,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-=======
-﻿using FitnessCenterManagement.userControls;
->>>>>>> Stashed changes
+using FitnessCenterManagement.userControls;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FitnessCenterManagement.Forms
 {
+    public enum UserRole
+    {
+        Admin,
+        Receptionist
+    }
+
     public partial class MainForm : Form
     {
-<<<<<<< Updated upstream
         public MainForm()
-        {
-            InitializeComponent();
-=======
-        private readonly UserRole _currentUserRole;
-        private readonly string _userName;
-        private UserControl? _activeView;
-        private Button? _activeMenuButton;
-
-        public MainForm(UserRole role, string userName)
         {
             InitializeComponent();
             _currentUserRole = role;
@@ -129,15 +124,15 @@ namespace FitnessCenterManagement.Forms
             Close();
         }
 
-        private void logo_Click(object sender, System.EventArgs e)
+
+        private void logo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button8_Click(object sender, System.EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
 
->>>>>>> Stashed changes
         }
     }
 }
