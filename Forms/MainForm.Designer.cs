@@ -35,6 +35,7 @@
             btnSettings = new Button();
             btnUserManagement = new Button();
             btnReports = new Button();
+            btnMembershipPlans = new Button();
             btnTrainers = new Button();
             btnSubscriptions = new Button();
             btnAttendance = new Button();
@@ -64,9 +65,10 @@
             btnscontainer.Controls.Add(btnSettings);
             btnscontainer.Controls.Add(btnUserManagement);
             btnscontainer.Controls.Add(btnReports);
-            btnscontainer.Controls.Add(btnTrainers);
-            btnscontainer.Controls.Add(btnSubscriptions);
             btnscontainer.Controls.Add(btnAttendance);
+            btnscontainer.Controls.Add(btnSubscriptions);
+            btnscontainer.Controls.Add(btnMembershipPlans);
+            btnscontainer.Controls.Add(btnTrainers);
             btnscontainer.Controls.Add(btnMembers);
             btnscontainer.Controls.Add(btnDashboard);
             btnscontainer.Dock = DockStyle.Fill;
@@ -89,7 +91,7 @@
             button8.Padding = new Padding(1);
             button8.Size = new Size(200, 49);
             button8.TabIndex = 8;
-            button8.Text = "🚪 Logout";
+            button8.Text = "Logout";
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
@@ -108,7 +110,8 @@
             btnSettings.Padding = new Padding(1);
             btnSettings.Size = new Size(200, 50);
             btnSettings.TabIndex = 7;
-            btnSettings.Text = "⚙️ Settings";
+            btnSettings.Text = "Settings";
+            btnSettings.Visible = false;
             btnSettings.TextAlign = ContentAlignment.MiddleLeft;
             btnSettings.UseVisualStyleBackColor = false;
             // 
@@ -127,7 +130,7 @@
             btnUserManagement.Padding = new Padding(1);
             btnUserManagement.Size = new Size(200, 50);
             btnUserManagement.TabIndex = 6;
-            btnUserManagement.Text = "👤 User Management";
+            btnUserManagement.Text = "Users";
             btnUserManagement.TextAlign = ContentAlignment.MiddleLeft;
             btnUserManagement.UseVisualStyleBackColor = false;
             // 
@@ -146,9 +149,28 @@
             btnReports.Padding = new Padding(1);
             btnReports.Size = new Size(200, 50);
             btnReports.TabIndex = 5;
-            btnReports.Text = "📈 Reports";
+            btnReports.Text = "Reports";
             btnReports.TextAlign = ContentAlignment.MiddleLeft;
             btnReports.UseVisualStyleBackColor = false;
+            // 
+            // btnMembershipPlans
+            // 
+            btnMembershipPlans.BackColor = Color.Transparent;
+            btnMembershipPlans.Dock = DockStyle.Top;
+            btnMembershipPlans.FlatAppearance.BorderSize = 0;
+            btnMembershipPlans.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 41, 59);
+            btnMembershipPlans.FlatStyle = FlatStyle.Flat;
+            btnMembershipPlans.Font = new Font("Arial", 11F, FontStyle.Bold);
+            btnMembershipPlans.ForeColor = Color.White;
+            btnMembershipPlans.Location = new Point(0, 250);
+            btnMembershipPlans.Margin = new Padding(5);
+            btnMembershipPlans.Name = "btnMembershipPlans";
+            btnMembershipPlans.Padding = new Padding(1);
+            btnMembershipPlans.Size = new Size(200, 50);
+            btnMembershipPlans.TabIndex = 9;
+            btnMembershipPlans.Text = "Membership Plans";
+            btnMembershipPlans.TextAlign = ContentAlignment.MiddleLeft;
+            btnMembershipPlans.UseVisualStyleBackColor = false;
             // 
             // btnTrainers
             // 
@@ -165,7 +187,7 @@
             btnTrainers.Padding = new Padding(1);
             btnTrainers.Size = new Size(200, 50);
             btnTrainers.TabIndex = 4;
-            btnTrainers.Text = "🏋️ Trainers";
+            btnTrainers.Text = "Trainers";
             btnTrainers.TextAlign = ContentAlignment.MiddleLeft;
             btnTrainers.UseVisualStyleBackColor = false;
             // 
@@ -184,7 +206,7 @@
             btnSubscriptions.Padding = new Padding(1);
             btnSubscriptions.Size = new Size(200, 50);
             btnSubscriptions.TabIndex = 3;
-            btnSubscriptions.Text = "💳 Subscriptions";
+            btnSubscriptions.Text = "Subscriptions";
             btnSubscriptions.TextAlign = ContentAlignment.MiddleLeft;
             btnSubscriptions.UseVisualStyleBackColor = false;
             // 
@@ -203,7 +225,7 @@
             btnAttendance.Padding = new Padding(1);
             btnAttendance.Size = new Size(200, 50);
             btnAttendance.TabIndex = 2;
-            btnAttendance.Text = "📅 Attendance";
+            btnAttendance.Text = "Attendance";
             btnAttendance.TextAlign = ContentAlignment.MiddleLeft;
             btnAttendance.UseVisualStyleBackColor = false;
             // 
@@ -222,7 +244,7 @@
             btnMembers.Padding = new Padding(1);
             btnMembers.Size = new Size(200, 50);
             btnMembers.TabIndex = 1;
-            btnMembers.Text = "👥 Members";
+            btnMembers.Text = "Members";
             btnMembers.TextAlign = ContentAlignment.MiddleLeft;
             btnMembers.UseVisualStyleBackColor = false;
             // 
@@ -241,7 +263,7 @@
             btnDashboard.Padding = new Padding(1);
             btnDashboard.Size = new Size(200, 50);
             btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "📊 Dashboard";
+            btnDashboard.Text = "Dashboard";
             btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
             btnDashboard.UseVisualStyleBackColor = false;
             // 
@@ -279,7 +301,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "Fitness Center Management System";
             sidebar.ResumeLayout(false);
             btnscontainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
@@ -294,6 +316,7 @@
         private Panel btnscontainer;
         private Button btnUserManagement;
         private Button btnReports;
+        private Button btnMembershipPlans;
         private Button btnTrainers;
         private Button btnSubscriptions;
         private Button btnAttendance;

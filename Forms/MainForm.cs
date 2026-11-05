@@ -1,10 +1,8 @@
-﻿using FitnessCenterManagement.userControls;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
+using FitnessCenterManagement.userControls;
 
 namespace FitnessCenterManagement.Forms
 {
+    // نوع المستخدم: أدمن أو موظف استقبال
     public enum UserRole
     {
         Admin,
@@ -16,6 +14,11 @@ namespace FitnessCenterManagement.Forms
         private readonly UserRole _currentUserRole;
         private readonly string _userName;
         private UserControl? _activeView;
+        private Button? _activeMenuButton;
+
+        public MainForm() : this(UserRole.Admin, "Admin")
+        {
+        }
 
         public MainForm(UserRole role, string userName)
         {
@@ -25,27 +28,48 @@ namespace FitnessCenterManagement.Forms
 
             WireEvents();
             ApplyRolePermissions();
-            LoadDashboard();
+
+            // أول شاشة بعد الدخول - لوحة التحكم
+            OpenPage(btnDashboard, new DashboardUserControl(_userName));
         }
 
+        // ربط أزرار القائمة الجانبية بالشاشات
         private void WireEvents()
         {
-            btnDashboard.Click += (_, _) => LoadDashboard();
-            btnMembers.Click += (_, _) => LoadView(CreatePlaceholderView("Members"));
-            btnAttendance.Click += (_, _) => LoadView(CreatePlaceholderView("Attendance"));
-            btnSubscriptions.Click += (_, _) => LoadView(CreatePlaceholderView("Subscriptions"));
-            btnTrainers.Click += (_, _) => LoadView(CreatePlaceholderView("Trainers"));
-            btnReports.Click += (_, _) => LoadView(CreatePlaceholderView("Reports"));
-            btnUserManagement.Click += BtnUserManagement_Click;
-            btnSettings.Click += (_, _) => LoadView(new SettingsUserControl(_currentUserRole));
-            button8.Click += btnLogout_Click;
+            // لوحة التحكم - بتعرض الداشبورد
+            btnDashboard.Click += (_, _) => OpenPage(btnDashboard, new DashboardUserControl(_userName));
+
+            // الأعضاء - بتعرض جدول الأعضاء
+            btnMembers.Click += (_, _) => OpenPage(btnMembers, new MembersUserControl());
+
+            // المدربين - بتعرض جدول المدربين
+            btnTrainers.Click += (_, _) => OpenPage(btnTrainers, new TrainersUserControl());
+
+            // خطط العضوية - بتعرض جدول الخطط
+            btnMembershipPlans.Click += (_, _) => OpenPage(btnMembershipPlans, new MembershipPlansUserControl());
+
+            // الاشتراكات - بتعرض جدول الاشتراكات
+            btnSubscriptions.Click += (_, _) => OpenPage(btnSubscriptions, new SubscriptionsUserControl());
+
+            // الحضور - بتعرض شاشة الحضور
+            btnAttendance.Click += (_, _) => OpenPage(btnAttendance, new AttendanceUserControl());
+
+            // التقارير - بتعرض شاشة التقارير
+            btnReports.Click += (_, _) => OpenPage(btnReports, new ReportsUserControl());
+
+            // المستخدمين - للأدمن فقط، بتعرض جدول المستخدمين
+            btnUserManagement.Click += (_, _) =>
+            {
+                if (_currentUserRole != UserRole.Admin)
+                {
+                    return;
+                }
+
+                OpenPage(btnUserManagement, new UsersUserControl());
+            };
         }
 
-        private void LoadDashboard()
-        {
-            LoadView(new DashboardUserControl());
-        }
-
+        // إخفاء أزرار الأدمن عن موظف الاستقبال
         private void ApplyRolePermissions()
         {
             if (_currentUserRole == UserRole.Receptionist)
@@ -56,7 +80,20 @@ namespace FitnessCenterManagement.Forms
             }
         }
 
-        // Swaps dynamic user control views into the content panel
+        // بيفتح الشاشة ويعلّم زرارها في القائمة باللون الأزرق
+        private void OpenPage(Button menuButton, UserControl view)
+        {
+            if (_activeMenuButton != null)
+            {
+                _activeMenuButton.BackColor = Color.Transparent;
+            }
+
+            menuButton.BackColor = Color.FromArgb(37, 99, 235);
+            _activeMenuButton = menuButton;
+            LoadView(view);
+        }
+
+        // بيخفي الشاشة الحالية ويظهر الشاشة الجديدة في نص الصفحة
         public void LoadView(UserControl view)
         {
             if (_activeView != null)
@@ -71,48 +108,14 @@ namespace FitnessCenterManagement.Forms
             _activeView.BringToFront();
         }
 
-        private void BtnUserManagement_Click(object? sender, EventArgs e)
+        // زرار الخروج - يقفل الصفحة
+        private void button8_Click(object sender, EventArgs e)
         {
-            if (_currentUserRole != UserRole.Admin)
-            {
-                return;
-            }
-
-            LoadView(CreatePlaceholderView("User Management"));
-        }
-
-        private UserControl CreatePlaceholderView(string title)
-        {
-            var container = new UserControl { BackColor = Color.White };
-            var label = new Label
-            {
-                AutoSize = true,
-                Font = new Font("Segoe UI", 22F, FontStyle.Bold),
-                ForeColor = Color.FromArgb(31, 41, 55),
-                Text = title,
-                Location = new Point(32, 32)
-            };
-
-            container.Controls.Add(label);
-            return container;
-        }
-
-        private void btnLogout_Click(object? sender, EventArgs e)
-        {
-            Hide();
-            using var login = new LoginForm();
-            login.ShowDialog();
             Close();
         }
 
         private void logo_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
