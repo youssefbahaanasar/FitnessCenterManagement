@@ -28,548 +28,416 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardUserControl));
-            maincontainer = new TableLayoutPanel();
-            statsContainer = new TableLayoutPanel();
-            card1 = new Panel();
-            splitContainer2 = new SplitContainer();
-            pictureBox1 = new PictureBox();
-            splitContainer3 = new SplitContainer();
-            label2 = new Label();
-            label3 = new Label();
-            panel1 = new Panel();
-            splitContainer1 = new SplitContainer();
-            pictureBox2 = new PictureBox();
-            splitContainer4 = new SplitContainer();
-            label1 = new Label();
-            label4 = new Label();
-            panel2 = new Panel();
-            splitContainer5 = new SplitContainer();
-            pictureBox3 = new PictureBox();
-            splitContainer6 = new SplitContainer();
-            label5 = new Label();
-            label6 = new Label();
-            panel3 = new Panel();
-            splitContainer7 = new SplitContainer();
-            pictureBox4 = new PictureBox();
-            splitContainer8 = new SplitContainer();
-            label7 = new Label();
-            label8 = new Label();
-            maincontainer.SuspendLayout();
-            statsContainer.SuspendLayout();
-            card1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
-            splitContainer2.Panel1.SuspendLayout();
-            splitContainer2.Panel2.SuspendLayout();
-            splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
-            splitContainer3.Panel1.SuspendLayout();
-            splitContainer3.Panel2.SuspendLayout();
-            splitContainer3.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)splitContainer4).BeginInit();
-            splitContainer4.Panel1.SuspendLayout();
-            splitContainer4.Panel2.SuspendLayout();
-            splitContainer4.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer5).BeginInit();
-            splitContainer5.Panel1.SuspendLayout();
-            splitContainer5.Panel2.SuspendLayout();
-            splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)splitContainer6).BeginInit();
-            splitContainer6.Panel1.SuspendLayout();
-            splitContainer6.Panel2.SuspendLayout();
-            splitContainer6.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer7).BeginInit();
-            splitContainer7.Panel1.SuspendLayout();
-            splitContainer7.Panel2.SuspendLayout();
-            splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)splitContainer8).BeginInit();
-            splitContainer8.Panel1.SuspendLayout();
-            splitContainer8.Panel2.SuspendLayout();
-            splitContainer8.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            panelHeader = new Panel();
+            lblTitle = new Label();
+            lblWelcome = new Label();
+            tableCards = new TableLayoutPanel();
+            cardMembers = new Panel();
+            panelIconMembers = new Panel();
+            lblIconMembers = new Label();
+            lblMembersCaption = new Label();
+            lblMembersValue = new Label();
+            cardTrainers = new Panel();
+            panelIconTrainers = new Panel();
+            lblIconTrainers = new Label();
+            lblTrainersCaption = new Label();
+            lblTrainersValue = new Label();
+            cardSubscriptions = new Panel();
+            panelIconSubscriptions = new Panel();
+            lblIconSubscriptions = new Label();
+            lblSubscriptionsCaption = new Label();
+            lblSubscriptionsValue = new Label();
+            cardCheckIns = new Panel();
+            panelIconCheckIns = new Panel();
+            lblIconCheckIns = new Label();
+            lblCheckInsCaption = new Label();
+            lblCheckInsValue = new Label();
+            tableCharts = new TableLayoutPanel();
+            panelBars = new Panel();
+            panelDonut = new Panel();
+            panelHeader.SuspendLayout();
+            tableCards.SuspendLayout();
+            cardMembers.SuspendLayout();
+            panelIconMembers.SuspendLayout();
+            cardTrainers.SuspendLayout();
+            panelIconTrainers.SuspendLayout();
+            cardSubscriptions.SuspendLayout();
+            panelIconSubscriptions.SuspendLayout();
+            cardCheckIns.SuspendLayout();
+            panelIconCheckIns.SuspendLayout();
+            tableCharts.SuspendLayout();
             SuspendLayout();
             // 
-            // maincontainer
-            // 
-            maincontainer.BackColor = Color.Transparent;
-            maincontainer.ColumnCount = 1;
-            maincontainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            maincontainer.Controls.Add(statsContainer, 0, 0);
-            maincontainer.Dock = DockStyle.Fill;
-            maincontainer.ForeColor = Color.Black;
-            maincontainer.Location = new Point(0, 0);
-            maincontainer.Name = "maincontainer";
-            maincontainer.RowCount = 2;
-            maincontainer.RowStyles.Add(new RowStyle(SizeType.Percent, 22.8675137F));
-            maincontainer.RowStyles.Add(new RowStyle(SizeType.Percent, 77.1324844F));
-            maincontainer.Size = new Size(815, 551);
-            maincontainer.TabIndex = 0;
-            // 
-            // statsContainer
-            // 
-            statsContainer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            statsContainer.ColumnCount = 4;
-            statsContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            statsContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            statsContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            statsContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            statsContainer.Controls.Add(panel3, 3, 0);
-            statsContainer.Controls.Add(panel2, 2, 0);
-            statsContainer.Controls.Add(panel1, 1, 0);
-            statsContainer.Controls.Add(card1, 0, 0);
-            statsContainer.Location = new Point(3, 3);
-            statsContainer.Name = "statsContainer";
-            statsContainer.Padding = new Padding(8);
-            statsContainer.RowCount = 1;
-            statsContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            statsContainer.Size = new Size(809, 120);
-            statsContainer.TabIndex = 0;
-            // 
-            // card1
-            // 
-            card1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            card1.BackColor = SystemColors.HighlightText;
-            card1.Controls.Add(splitContainer2);
-            card1.Location = new Point(11, 11);
-            card1.Name = "card1";
-            card1.Size = new Size(192, 98);
-            card1.TabIndex = 0;
-            // 
-            // splitContainer2
-            // 
-            splitContainer2.Dock = DockStyle.Fill;
-            splitContainer2.Location = new Point(0, 0);
-            splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            splitContainer2.Panel1.Controls.Add(pictureBox1);
-            splitContainer2.Panel1.Padding = new Padding(5);
-            // 
-            // splitContainer2.Panel2
-            // 
-            splitContainer2.Panel2.Controls.Add(splitContainer3);
-            splitContainer2.Size = new Size(192, 98);
-            splitContainer2.SplitterDistance = 78;
-            splitContainer2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(5, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(68, 88);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // splitContainer3
-            // 
-            splitContainer3.Dock = DockStyle.Fill;
-            splitContainer3.Location = new Point(0, 0);
-            splitContainer3.Name = "splitContainer3";
-            splitContainer3.Orientation = Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            splitContainer3.Panel1.Controls.Add(label2);
-            // 
-            // splitContainer3.Panel2
-            // 
-            splitContainer3.Panel2.Controls.Add(label3);
-            splitContainer3.Size = new Size(110, 98);
-            splitContainer3.SplitterDistance = 36;
-            splitContainer3.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Padding = new Padding(0, 5, 5, 5);
-            label2.Size = new Size(103, 38);
-            label2.TabIndex = 0;
-            label2.Text = "Members";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Dock = DockStyle.Left;
-            label3.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Padding = new Padding(5);
-            label3.Size = new Size(90, 56);
-            label3.TabIndex = 0;
-            label3.Text = "200";
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.BackColor = SystemColors.HighlightText;
-            panel1.Controls.Add(splitContainer1);
-            panel1.Location = new Point(209, 11);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(192, 98);
-            panel1.TabIndex = 1;
-            // 
-            // splitContainer1
-            // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            splitContainer1.Panel1.Controls.Add(pictureBox2);
-            splitContainer1.Panel1.Padding = new Padding(5);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.Controls.Add(splitContainer4);
-            splitContainer1.Size = new Size(192, 98);
-            splitContainer1.SplitterDistance = 78;
-            splitContainer1.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Dock = DockStyle.Fill;
-            pictureBox2.Location = new Point(5, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Padding = new Padding(5);
-            pictureBox2.Size = new Size(68, 88);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
-            // splitContainer4
-            // 
-            splitContainer4.Dock = DockStyle.Fill;
-            splitContainer4.Location = new Point(0, 0);
-            splitContainer4.Name = "splitContainer4";
-            splitContainer4.Orientation = Orientation.Horizontal;
-            // 
-            // splitContainer4.Panel1
-            // 
-            splitContainer4.Panel1.Controls.Add(label1);
-            // 
-            // splitContainer4.Panel2
-            // 
-            splitContainer4.Panel2.Controls.Add(label4);
-            splitContainer4.Size = new Size(110, 98);
-            splitContainer4.SplitterDistance = 36;
-            splitContainer4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Padding = new Padding(0, 5, 5, 5);
-            label1.Size = new Size(87, 38);
-            label1.TabIndex = 0;
-            label1.Text = "Trainers";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Dock = DockStyle.Left;
-            label4.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
-            label4.Location = new Point(0, 0);
-            label4.Name = "label4";
-            label4.Padding = new Padding(5);
-            label4.Size = new Size(70, 56);
-            label4.TabIndex = 0;
-            label4.Text = "12";
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.BackColor = SystemColors.HighlightText;
-            panel2.Controls.Add(splitContainer5);
-            panel2.Location = new Point(407, 11);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(192, 98);
-            panel2.TabIndex = 2;
-            // 
-            // splitContainer5
-            // 
-            splitContainer5.Dock = DockStyle.Fill;
-            splitContainer5.Location = new Point(0, 0);
-            splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            splitContainer5.Panel1.Controls.Add(pictureBox3);
-            splitContainer5.Panel1.Padding = new Padding(5);
-            // 
-            // splitContainer5.Panel2
-            // 
-            splitContainer5.Panel2.Controls.Add(splitContainer6);
-            splitContainer5.Size = new Size(192, 98);
-            splitContainer5.SplitterDistance = 78;
-            splitContainer5.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox3.Dock = DockStyle.Fill;
-            pictureBox3.Location = new Point(5, 5);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Padding = new Padding(5);
-            pictureBox3.Size = new Size(68, 88);
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
-            // 
-            // splitContainer6
-            // 
-            splitContainer6.Dock = DockStyle.Fill;
-            splitContainer6.Location = new Point(0, 0);
-            splitContainer6.Name = "splitContainer6";
-            splitContainer6.Orientation = Orientation.Horizontal;
-            // 
-            // splitContainer6.Panel1
-            // 
-            splitContainer6.Panel1.Controls.Add(label5);
-            // 
-            // splitContainer6.Panel2
-            // 
-            splitContainer6.Panel2.Controls.Add(label6);
-            splitContainer6.Size = new Size(110, 98);
-            splitContainer6.SplitterDistance = 36;
-            splitContainer6.TabIndex = 0;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Dock = DockStyle.Fill;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(0, 0);
-            label5.Name = "label5";
-            label5.Padding = new Padding(0, 5, 5, 5);
-            label5.Size = new Size(114, 31);
-            label5.TabIndex = 0;
-            label5.Text = "Subscriptions";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Dock = DockStyle.Left;
-            label6.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
-            label6.Location = new Point(0, 0);
-            label6.Name = "label6";
-            label6.Padding = new Padding(5);
-            label6.Size = new Size(70, 56);
-            label6.TabIndex = 0;
-            label6.Text = "45";
-            // 
-            // panel3
-            // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel3.BackColor = SystemColors.HighlightText;
-            panel3.Controls.Add(splitContainer7);
-            panel3.Location = new Point(605, 11);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(193, 98);
-            panel3.TabIndex = 3;
-            // 
-            // splitContainer7
-            // 
-            splitContainer7.Dock = DockStyle.Fill;
-            splitContainer7.Location = new Point(0, 0);
-            splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            splitContainer7.Panel1.Controls.Add(pictureBox4);
-            splitContainer7.Panel1.Padding = new Padding(5);
-            // 
-            // splitContainer7.Panel2
-            // 
-            splitContainer7.Panel2.Controls.Add(splitContainer8);
-            splitContainer7.Size = new Size(193, 98);
-            splitContainer7.SplitterDistance = 78;
-            splitContainer7.TabIndex = 0;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
-            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox4.Dock = DockStyle.Fill;
-            pictureBox4.Location = new Point(5, 5);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Padding = new Padding(5);
-            pictureBox4.Size = new Size(68, 88);
-            pictureBox4.TabIndex = 0;
-            pictureBox4.TabStop = false;
-            // 
-            // splitContainer8
-            // 
-            splitContainer8.Dock = DockStyle.Fill;
-            splitContainer8.Location = new Point(0, 0);
-            splitContainer8.Name = "splitContainer8";
-            splitContainer8.Orientation = Orientation.Horizontal;
-            // 
-            // splitContainer8.Panel1
-            // 
-            splitContainer8.Panel1.Controls.Add(label7);
-            // 
-            // splitContainer8.Panel2
-            // 
-            splitContainer8.Panel2.Controls.Add(label8);
-            splitContainer8.Size = new Size(111, 98);
-            splitContainer8.SplitterDistance = 36;
-            splitContainer8.TabIndex = 0;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Dock = DockStyle.Fill;
-            label7.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(0, 0);
-            label7.Name = "label7";
-            label7.Padding = new Padding(0, 5, 5, 5);
-            label7.Size = new Size(116, 29);
-            label7.TabIndex = 0;
-            label7.Text = "Check-ins Today";
-            label7.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Dock = DockStyle.Left;
-            label8.Font = new Font("Segoe UI", 25F, FontStyle.Bold);
-            label8.Location = new Point(0, 0);
-            label8.Name = "label8";
-            label8.Padding = new Padding(5);
-            label8.Size = new Size(70, 56);
-            label8.TabIndex = 0;
-            label8.Text = "30";
+            // panelHeader
+            // 
+            panelHeader.Controls.Add(lblWelcome);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(20, 16);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(860, 52);
+            panelHeader.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.FromArgb(15, 23, 42);
+            lblTitle.Location = new Point(4, 6);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(148, 37);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Dashboard";
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblWelcome.Font = new Font("Segoe UI", 10F);
+            lblWelcome.ForeColor = Color.FromArgb(100, 116, 139);
+            lblWelcome.Location = new Point(640, 16);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(216, 23);
+            lblWelcome.TabIndex = 1;
+            lblWelcome.Text = "Welcome, Admin";
+            lblWelcome.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // tableCards
+            // 
+            tableCards.ColumnCount = 4;
+            tableCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableCards.Controls.Add(cardMembers, 0, 0);
+            tableCards.Controls.Add(cardTrainers, 1, 0);
+            tableCards.Controls.Add(cardSubscriptions, 2, 0);
+            tableCards.Controls.Add(cardCheckIns, 3, 0);
+            tableCards.Dock = DockStyle.Top;
+            tableCards.Location = new Point(20, 68);
+            tableCards.Name = "tableCards";
+            tableCards.RowCount = 1;
+            tableCards.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableCards.Size = new Size(860, 118);
+            tableCards.TabIndex = 1;
+            // 
+            // cardMembers
+            // 
+            cardMembers.BackColor = Color.White;
+            cardMembers.Controls.Add(lblMembersValue);
+            cardMembers.Controls.Add(lblMembersCaption);
+            cardMembers.Controls.Add(panelIconMembers);
+            cardMembers.Dock = DockStyle.Fill;
+            cardMembers.Location = new Point(0, 0);
+            cardMembers.Margin = new Padding(0, 0, 12, 0);
+            cardMembers.Name = "cardMembers";
+            cardMembers.Size = new Size(203, 118);
+            cardMembers.TabIndex = 0;
+            // 
+            // panelIconMembers
+            // 
+            panelIconMembers.BackColor = Color.FromArgb(219, 234, 254);
+            panelIconMembers.Controls.Add(lblIconMembers);
+            panelIconMembers.Location = new Point(16, 32);
+            panelIconMembers.Name = "panelIconMembers";
+            panelIconMembers.Size = new Size(48, 48);
+            panelIconMembers.TabIndex = 0;
+            // 
+            // lblIconMembers
+            // 
+            lblIconMembers.Dock = DockStyle.Fill;
+            lblIconMembers.Font = new Font("Segoe MDL2 Assets", 16F);
+            lblIconMembers.ForeColor = Color.FromArgb(37, 99, 235);
+            lblIconMembers.Location = new Point(0, 0);
+            lblIconMembers.Name = "lblIconMembers";
+            lblIconMembers.Size = new Size(48, 48);
+            lblIconMembers.TabIndex = 0;
+            lblIconMembers.Text = "\uE716";
+            lblIconMembers.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblMembersCaption
+            // 
+            lblMembersCaption.AutoSize = true;
+            lblMembersCaption.Font = new Font("Segoe UI", 9.5F);
+            lblMembersCaption.ForeColor = Color.FromArgb(100, 116, 139);
+            lblMembersCaption.Location = new Point(76, 30);
+            lblMembersCaption.Name = "lblMembersCaption";
+            lblMembersCaption.Size = new Size(99, 17);
+            lblMembersCaption.TabIndex = 1;
+            lblMembersCaption.Text = "Total Members";
+            // 
+            // lblMembersValue
+            // 
+            lblMembersValue.AutoSize = true;
+            lblMembersValue.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblMembersValue.ForeColor = Color.FromArgb(15, 23, 42);
+            lblMembersValue.Location = new Point(74, 50);
+            lblMembersValue.Name = "lblMembersValue";
+            lblMembersValue.Size = new Size(62, 37);
+            lblMembersValue.TabIndex = 2;
+            lblMembersValue.Text = "248";
+            // 
+            // cardTrainers
+            // 
+            cardTrainers.BackColor = Color.White;
+            cardTrainers.Controls.Add(lblTrainersValue);
+            cardTrainers.Controls.Add(lblTrainersCaption);
+            cardTrainers.Controls.Add(panelIconTrainers);
+            cardTrainers.Dock = DockStyle.Fill;
+            cardTrainers.Location = new Point(218, 0);
+            cardTrainers.Margin = new Padding(6, 0, 6, 0);
+            cardTrainers.Name = "cardTrainers";
+            cardTrainers.Size = new Size(203, 118);
+            cardTrainers.TabIndex = 1;
+            // 
+            // panelIconTrainers
+            // 
+            panelIconTrainers.BackColor = Color.FromArgb(237, 233, 254);
+            panelIconTrainers.Controls.Add(lblIconTrainers);
+            panelIconTrainers.Location = new Point(16, 32);
+            panelIconTrainers.Name = "panelIconTrainers";
+            panelIconTrainers.Size = new Size(48, 48);
+            panelIconTrainers.TabIndex = 0;
+            // 
+            // lblIconTrainers
+            // 
+            lblIconTrainers.Dock = DockStyle.Fill;
+            lblIconTrainers.Font = new Font("Segoe MDL2 Assets", 16F);
+            lblIconTrainers.ForeColor = Color.FromArgb(124, 58, 237);
+            lblIconTrainers.Location = new Point(0, 0);
+            lblIconTrainers.Name = "lblIconTrainers";
+            lblIconTrainers.Size = new Size(48, 48);
+            lblIconTrainers.TabIndex = 0;
+            lblIconTrainers.Text = "\uE77B";
+            lblIconTrainers.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblTrainersCaption
+            // 
+            lblTrainersCaption.AutoSize = true;
+            lblTrainersCaption.Font = new Font("Segoe UI", 9.5F);
+            lblTrainersCaption.ForeColor = Color.FromArgb(100, 116, 139);
+            lblTrainersCaption.Location = new Point(76, 30);
+            lblTrainersCaption.Name = "lblTrainersCaption";
+            lblTrainersCaption.Size = new Size(88, 17);
+            lblTrainersCaption.TabIndex = 1;
+            lblTrainersCaption.Text = "Total Trainers";
+            // 
+            // lblTrainersValue
+            // 
+            lblTrainersValue.AutoSize = true;
+            lblTrainersValue.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTrainersValue.ForeColor = Color.FromArgb(15, 23, 42);
+            lblTrainersValue.Location = new Point(74, 50);
+            lblTrainersValue.Name = "lblTrainersValue";
+            lblTrainersValue.Size = new Size(42, 37);
+            lblTrainersValue.TabIndex = 2;
+            lblTrainersValue.Text = "12";
+            // 
+            // cardSubscriptions
+            // 
+            cardSubscriptions.BackColor = Color.White;
+            cardSubscriptions.Controls.Add(lblSubscriptionsValue);
+            cardSubscriptions.Controls.Add(lblSubscriptionsCaption);
+            cardSubscriptions.Controls.Add(panelIconSubscriptions);
+            cardSubscriptions.Dock = DockStyle.Fill;
+            cardSubscriptions.Location = new Point(433, 0);
+            cardSubscriptions.Margin = new Padding(6, 0, 6, 0);
+            cardSubscriptions.Name = "cardSubscriptions";
+            cardSubscriptions.Size = new Size(203, 118);
+            cardSubscriptions.TabIndex = 2;
+            // 
+            // panelIconSubscriptions
+            // 
+            panelIconSubscriptions.BackColor = Color.FromArgb(220, 252, 231);
+            panelIconSubscriptions.Controls.Add(lblIconSubscriptions);
+            panelIconSubscriptions.Location = new Point(16, 32);
+            panelIconSubscriptions.Name = "panelIconSubscriptions";
+            panelIconSubscriptions.Size = new Size(48, 48);
+            panelIconSubscriptions.TabIndex = 0;
+            // 
+            // lblIconSubscriptions
+            // 
+            lblIconSubscriptions.Dock = DockStyle.Fill;
+            lblIconSubscriptions.Font = new Font("Segoe MDL2 Assets", 16F);
+            lblIconSubscriptions.ForeColor = Color.FromArgb(22, 163, 74);
+            lblIconSubscriptions.Location = new Point(0, 0);
+            lblIconSubscriptions.Name = "lblIconSubscriptions";
+            lblIconSubscriptions.Size = new Size(48, 48);
+            lblIconSubscriptions.TabIndex = 0;
+            lblIconSubscriptions.Text = "\uE787";
+            lblIconSubscriptions.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblSubscriptionsCaption
+            // 
+            lblSubscriptionsCaption.AutoSize = true;
+            lblSubscriptionsCaption.Font = new Font("Segoe UI", 9.5F);
+            lblSubscriptionsCaption.ForeColor = Color.FromArgb(100, 116, 139);
+            lblSubscriptionsCaption.Location = new Point(76, 30);
+            lblSubscriptionsCaption.Name = "lblSubscriptionsCaption";
+            lblSubscriptionsCaption.Size = new Size(126, 17);
+            lblSubscriptionsCaption.TabIndex = 1;
+            lblSubscriptionsCaption.Text = "Active Subscriptions";
+            // 
+            // lblSubscriptionsValue
+            // 
+            lblSubscriptionsValue.AutoSize = true;
+            lblSubscriptionsValue.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblSubscriptionsValue.ForeColor = Color.FromArgb(15, 23, 42);
+            lblSubscriptionsValue.Location = new Point(74, 50);
+            lblSubscriptionsValue.Name = "lblSubscriptionsValue";
+            lblSubscriptionsValue.Size = new Size(62, 37);
+            lblSubscriptionsValue.TabIndex = 2;
+            lblSubscriptionsValue.Text = "201";
+            // 
+            // cardCheckIns
+            // 
+            cardCheckIns.BackColor = Color.White;
+            cardCheckIns.Controls.Add(lblCheckInsValue);
+            cardCheckIns.Controls.Add(lblCheckInsCaption);
+            cardCheckIns.Controls.Add(panelIconCheckIns);
+            cardCheckIns.Dock = DockStyle.Fill;
+            cardCheckIns.Location = new Point(648, 0);
+            cardCheckIns.Margin = new Padding(12, 0, 0, 0);
+            cardCheckIns.Name = "cardCheckIns";
+            cardCheckIns.Size = new Size(212, 118);
+            cardCheckIns.TabIndex = 3;
+            // 
+            // panelIconCheckIns
+            // 
+            panelIconCheckIns.BackColor = Color.FromArgb(255, 237, 213);
+            panelIconCheckIns.Controls.Add(lblIconCheckIns);
+            panelIconCheckIns.Location = new Point(16, 32);
+            panelIconCheckIns.Name = "panelIconCheckIns";
+            panelIconCheckIns.Size = new Size(48, 48);
+            panelIconCheckIns.TabIndex = 0;
+            // 
+            // lblIconCheckIns
+            // 
+            lblIconCheckIns.Dock = DockStyle.Fill;
+            lblIconCheckIns.Font = new Font("Segoe MDL2 Assets", 16F);
+            lblIconCheckIns.ForeColor = Color.FromArgb(249, 115, 22);
+            lblIconCheckIns.Location = new Point(0, 0);
+            lblIconCheckIns.Name = "lblIconCheckIns";
+            lblIconCheckIns.Size = new Size(48, 48);
+            lblIconCheckIns.TabIndex = 0;
+            lblIconCheckIns.Text = "\uE823";
+            lblIconCheckIns.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblCheckInsCaption
+            // 
+            lblCheckInsCaption.AutoSize = true;
+            lblCheckInsCaption.Font = new Font("Segoe UI", 9.5F);
+            lblCheckInsCaption.ForeColor = Color.FromArgb(100, 116, 139);
+            lblCheckInsCaption.Location = new Point(76, 30);
+            lblCheckInsCaption.Name = "lblCheckInsCaption";
+            lblCheckInsCaption.Size = new Size(104, 17);
+            lblCheckInsCaption.TabIndex = 1;
+            lblCheckInsCaption.Text = "Check-ins Today";
+            // 
+            // lblCheckInsValue
+            // 
+            lblCheckInsValue.AutoSize = true;
+            lblCheckInsValue.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblCheckInsValue.ForeColor = Color.FromArgb(15, 23, 42);
+            lblCheckInsValue.Location = new Point(74, 50);
+            lblCheckInsValue.Name = "lblCheckInsValue";
+            lblCheckInsValue.Size = new Size(48, 37);
+            lblCheckInsValue.TabIndex = 2;
+            lblCheckInsValue.Text = "37";
+            // 
+            // tableCharts
+            // 
+            tableCharts.ColumnCount = 2;
+            tableCharts.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 62F));
+            tableCharts.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38F));
+            tableCharts.Controls.Add(panelBars, 0, 0);
+            tableCharts.Controls.Add(panelDonut, 1, 0);
+            tableCharts.Dock = DockStyle.Fill;
+            tableCharts.Location = new Point(20, 186);
+            tableCharts.Name = "tableCharts";
+            tableCharts.RowCount = 1;
+            tableCharts.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableCharts.Size = new Size(860, 448);
+            tableCharts.TabIndex = 2;
+            // 
+            // panelBars
+            // 
+            panelBars.BackColor = Color.White;
+            panelBars.Dock = DockStyle.Fill;
+            panelBars.Location = new Point(0, 16);
+            panelBars.Margin = new Padding(0, 16, 10, 0);
+            panelBars.Name = "panelBars";
+            panelBars.Size = new Size(523, 432);
+            panelBars.TabIndex = 0;
+            // 
+            // panelDonut
+            // 
+            panelDonut.BackColor = Color.White;
+            panelDonut.Dock = DockStyle.Fill;
+            panelDonut.Location = new Point(543, 16);
+            panelDonut.Margin = new Padding(10, 16, 0, 0);
+            panelDonut.Name = "panelDonut";
+            panelDonut.Size = new Size(317, 432);
+            panelDonut.TabIndex = 1;
             // 
             // DashboardUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
-            Controls.Add(maincontainer);
+            BackColor = Color.FromArgb(244, 247, 251);
+            Controls.Add(tableCharts);
+            Controls.Add(tableCards);
+            Controls.Add(panelHeader);
             Name = "DashboardUserControl";
-            Size = new Size(815, 551);
-            maincontainer.ResumeLayout(false);
-            statsContainer.ResumeLayout(false);
-            card1.ResumeLayout(false);
-            splitContainer2.Panel1.ResumeLayout(false);
-            splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
-            splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            splitContainer3.Panel1.ResumeLayout(false);
-            splitContainer3.Panel1.PerformLayout();
-            splitContainer3.Panel2.ResumeLayout(false);
-            splitContainer3.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
-            splitContainer3.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            splitContainer4.Panel1.ResumeLayout(false);
-            splitContainer4.Panel1.PerformLayout();
-            splitContainer4.Panel2.ResumeLayout(false);
-            splitContainer4.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer4).EndInit();
-            splitContainer4.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            splitContainer5.Panel1.ResumeLayout(false);
-            splitContainer5.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer5).EndInit();
-            splitContainer5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            splitContainer6.Panel1.ResumeLayout(false);
-            splitContainer6.Panel1.PerformLayout();
-            splitContainer6.Panel2.ResumeLayout(false);
-            splitContainer6.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer6).EndInit();
-            splitContainer6.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            splitContainer7.Panel1.ResumeLayout(false);
-            splitContainer7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer7).EndInit();
-            splitContainer7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            splitContainer8.Panel1.ResumeLayout(false);
-            splitContainer8.Panel1.PerformLayout();
-            splitContainer8.Panel2.ResumeLayout(false);
-            splitContainer8.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer8).EndInit();
-            splitContainer8.ResumeLayout(false);
+            Padding = new Padding(20, 16, 20, 16);
+            Size = new Size(900, 650);
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            tableCards.ResumeLayout(false);
+            cardMembers.ResumeLayout(false);
+            cardMembers.PerformLayout();
+            panelIconMembers.ResumeLayout(false);
+            cardTrainers.ResumeLayout(false);
+            cardTrainers.PerformLayout();
+            panelIconTrainers.ResumeLayout(false);
+            cardSubscriptions.ResumeLayout(false);
+            cardSubscriptions.PerformLayout();
+            panelIconSubscriptions.ResumeLayout(false);
+            cardCheckIns.ResumeLayout(false);
+            cardCheckIns.PerformLayout();
+            panelIconCheckIns.ResumeLayout(false);
+            tableCharts.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel maincontainer;
-        private TableLayoutPanel statsContainer;
-        private Panel card1;
-        private SplitContainer splitContainer2;
-        private PictureBox pictureBox1;
-        private SplitContainer splitContainer3;
-        private Label label2;
-        private Label label3;
-        private Panel panel3;
-        private SplitContainer splitContainer7;
-        private PictureBox pictureBox4;
-        private SplitContainer splitContainer8;
-        private Label label7;
-        private Label label8;
-        private Panel panel2;
-        private SplitContainer splitContainer5;
-        private PictureBox pictureBox3;
-        private SplitContainer splitContainer6;
-        private Label label5;
-        private Label label6;
-        private Panel panel1;
-        private SplitContainer splitContainer1;
-        private PictureBox pictureBox2;
-        private SplitContainer splitContainer4;
-        private Label label1;
-        private Label label4;
+        private Panel panelHeader;
+        private Label lblTitle;
+        private Label lblWelcome;
+        private TableLayoutPanel tableCards;
+        private Panel cardMembers;
+        private Panel panelIconMembers;
+        private Label lblIconMembers;
+        private Label lblMembersCaption;
+        private Label lblMembersValue;
+        private Panel cardTrainers;
+        private Panel panelIconTrainers;
+        private Label lblIconTrainers;
+        private Label lblTrainersCaption;
+        private Label lblTrainersValue;
+        private Panel cardSubscriptions;
+        private Panel panelIconSubscriptions;
+        private Label lblIconSubscriptions;
+        private Label lblSubscriptionsCaption;
+        private Label lblSubscriptionsValue;
+        private Panel cardCheckIns;
+        private Panel panelIconCheckIns;
+        private Label lblIconCheckIns;
+        private Label lblCheckInsCaption;
+        private Label lblCheckInsValue;
+        private TableLayoutPanel tableCharts;
+        private Panel panelBars;
+        private Panel panelDonut;
     }
 }
