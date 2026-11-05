@@ -42,12 +42,9 @@
             btnDashboard = new Button();
             logo = new PictureBox();
             pnlcontent = new Panel();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
             sidebar.SuspendLayout();
             btnscontainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
-            pnlcontent.SuspendLayout();
             SuspendLayout();
             // 
             // sidebar
@@ -265,33 +262,12 @@
             // pnlcontent
             // 
             pnlcontent.BackColor = SystemColors.ButtonFace;
-            pnlcontent.Controls.Add(button1);
-            pnlcontent.Controls.Add(checkBox1);
             pnlcontent.Dock = DockStyle.Fill;
             pnlcontent.ImeMode = ImeMode.HangulFull;
             pnlcontent.Location = new Point(200, 0);
             pnlcontent.Name = "pnlcontent";
             pnlcontent.Size = new Size(900, 650);
             pnlcontent.TabIndex = 1;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(16, 12);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(83, 19);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(116, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -307,8 +283,6 @@
             sidebar.ResumeLayout(false);
             btnscontainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
-            pnlcontent.ResumeLayout(false);
-            pnlcontent.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -327,7 +301,5 @@
         private Button btnDashboard;
         private Button button8;
         private Button btnSettings;
-        private CheckBox checkBox1;
-        private Button button1;
     }
 }
