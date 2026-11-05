@@ -1,3 +1,5 @@
+using FitnessCenterManagement.Forms;
+
 namespace FitnessCenterManagement
 {
     internal static class Program
