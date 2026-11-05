@@ -1,30 +1,24 @@
-<<<<<<< Updated upstream
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-=======
-﻿using FitnessCenterManagement.userControls;
->>>>>>> Stashed changes
-using System.Windows.Forms;
+using FitnessCenterManagement.userControls;
 
 namespace FitnessCenterManagement.Forms
 {
+    // نوع المستخدم: أدمن أو موظف استقبال
+    public enum UserRole
+    {
+        Admin,
+        Receptionist
+    }
+
     public partial class MainForm : Form
     {
-<<<<<<< Updated upstream
-        public MainForm()
-        {
-            InitializeComponent();
-=======
         private readonly UserRole _currentUserRole;
         private readonly string _userName;
         private UserControl? _activeView;
         private Button? _activeMenuButton;
+
+        public MainForm() : this(UserRole.Admin, "Admin")
+        {
+        }
 
         public MainForm(UserRole role, string userName)
         {
@@ -73,12 +67,6 @@ namespace FitnessCenterManagement.Forms
 
                 OpenPage(btnUserManagement, new UsersUserControl());
             };
-
-            // الإعدادات - بتعرض شاشة الإعدادات
-            btnSettings.Click += (_, _) => LoadView(new SettingsUserControl(_currentUserRole));
-
-            // خروج - بيرجع لشاشة تسجيل الدخول
-            button8.Click += btnLogout_Click;
         }
 
         // إخفاء أزرار الأدمن عن موظف الاستقبال
@@ -120,24 +108,14 @@ namespace FitnessCenterManagement.Forms
             _activeView.BringToFront();
         }
 
-        // زرار الخروج - يقفل الصفحة ويرجع لتسجيل الدخول
-        private void btnLogout_Click(object? sender, System.EventArgs e)
+        // زرار الخروج - يقفل الصفحة
+        private void button8_Click(object sender, EventArgs e)
         {
-            Hide();
-            using var login = new LoginForm();
-            login.ShowDialog();
             Close();
         }
 
-        private void logo_Click(object sender, System.EventArgs e)
+        private void logo_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button8_Click(object sender, System.EventArgs e)
-        {
-
->>>>>>> Stashed changes
         }
     }
 }

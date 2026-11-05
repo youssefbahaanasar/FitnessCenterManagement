@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MainForm";
-        }
-
-        #endregion
-=======
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             sidebar = new Panel();
             btnscontainer = new Panel();
@@ -333,6 +324,5 @@
         private Button btnDashboard;
         private Button button8;
         private Button btnSettings;
->>>>>>> Stashed changes
     }
 }
